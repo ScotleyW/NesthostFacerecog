@@ -129,14 +129,14 @@ class SmartAccessActivity : AppCompatActivity() {
             }
     }
 
-    private fun sendServoCommand(command: String) {
+    private fun sendServoCommand(commands: String) {
         val commandRef = database.child("commands").child("servo")
-        commandRef.setValue(command)
+        commandRef.setValue(commands)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this@SmartAccessActivity, "Servo command sent: $command", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SmartAccessActivity, "Servo command sent: $commands", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this@SmartAccessActivity, "Failed to send servo command", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SmartAccessActivity, "Failed to send servo commands", Toast.LENGTH_SHORT).show()
                 }
             }
     }
@@ -147,4 +147,5 @@ class SmartAccessActivity : AppCompatActivity() {
         newStatusMessageRef.setValue(statusMessage)
     }
 }
+
 
