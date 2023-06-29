@@ -1,0 +1,8 @@
+<!-- bird_flight_path.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <pathInterpolator
+        android:controlX1="0.5"
+        android:controlY1="0"
+        android:controlX2="0.5"
+        android:controlY2="1.0" />
+</set>
